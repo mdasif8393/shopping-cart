@@ -102,7 +102,9 @@
          var number = document.getElementById("iphoneNumber").value;
          var floatNumber = parseFloat(number);
          document.getElementById("iphoneNumber").value = floatNumber -1;
-         
+         var Price = document.getElementById("iphonePrice").innerText;
+         var floatPrice = parseFloat(Price);
+         document.getElementById("iphonePrice").innerText = floatPrice - 1219 ;
       });
 
       //iphone number positive count function
