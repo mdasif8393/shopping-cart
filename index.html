@@ -97,6 +97,13 @@
          // var floatIphonePrice = parseFloat(iphonePrice);
          // document.getElementById("iphonePrice").innerText = floatIphonePrice + 1219 ;
       });
+      var iphoneMinusButton = document.getElementById('iphoneMinusButton');
+      iphoneMinusButton.addEventListener('click',function(){
+         var number = document.getElementById("iphoneNumber").value;
+         var floatNumber = parseFloat(number);
+         document.getElementById("iphoneNumber").value = floatNumber -1;
+         
+      });
 
       //iphone number positive count function
       function iphoneNumber (id){
@@ -110,11 +117,7 @@
          var floatIphonePrice = parseFloat(iphonePrice);
          document.getElementById(id).innerText = floatIphonePrice + 1219 ;
       }
-      //iphone - button work
-      // var iphoneMinusButton = document.getElementById("iphoneMinusButton");
-      // iphoneMinusButton = addEventListener('click',function(){
-         
-      // })
+      
    </script>
 </body>
 
