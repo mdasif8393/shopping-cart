@@ -48,12 +48,15 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                           <button id="iphoneCaseMinusButton" class="btn btn-default"><i class="fas fa-minus"></i></button>
+
+                           <input id="iphoneCaseNumber" type="text" class="form-control text-center" value="1">
+
+                           <button id="iphoneCasePlusButton" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id = "iphoneCasePrice">59</span> </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -97,6 +100,17 @@
          // var floatIphonePrice = parseFloat(iphonePrice);
          // document.getElementById("iphonePrice").innerText = floatIphonePrice + 1219 ;
       });
+
+      //iphone case + button work
+      var iphoneCasePlusButton=document.getElementById('iphoneCasePlusButton');
+      iphoneCasePlusButton.addEventListener('click',function(){
+         iphoneCaseNumberPositive ("iphoneCaseNumber");
+         
+         iphoneCasePricePositive("iphoneCasePrice");
+         
+      });
+
+      //iphone - button work
       var iphoneMinusButton = document.getElementById('iphoneMinusButton');
       iphoneMinusButton.addEventListener('click',function(){
          // var number = document.getElementById("iphoneNumber").value;
@@ -109,6 +123,10 @@
          iphonePriceNegative("iphonePrice");
       });
 
+      
+
+
+      //functions
       //iphone number negative count function
       function iphoneNumberNegative (id){
          var iphoneNumber = document.getElementById(id).value;
@@ -129,11 +147,24 @@
          var floatIphoneNumber = parseFloat(iphoneNumber);
          document.getElementById(id).value = floatIphoneNumber +1;
       }
+
+      //iphone case number positive count function
+      function iphoneCaseNumberPositive (id){
+         var iphoneNumber = document.getElementById(id).value;
+         var floatIphoneNumber = parseFloat(iphoneNumber);
+         document.getElementById(id).value = floatIphoneNumber +1;
+      }
       //iphone positive price count function
       function iphonePricePositive (id){
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice);
          document.getElementById(id).innerText = floatIphonePrice + 1219 ;
+      }
+      //iphone case positive price count function
+      function iphoneCasePricePositive (id){
+         var iphonePrice = document.getElementById(id).innerText;
+         var floatIphonePrice = parseFloat(iphonePrice);
+         document.getElementById(id).innerText = floatIphonePrice + 59 ;
       }
       
    </script>
