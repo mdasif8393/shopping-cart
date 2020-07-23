@@ -123,6 +123,15 @@
          iphonePriceNegative("iphonePrice");
       });
 
+       //iphone case - button work
+       var iphoneCaseMinusButton = document.getElementById('iphoneCaseMinusButton');
+       iphoneCaseMinusButton.addEventListener('click',function(){
+         
+         iphoneCaseNumberNegative("iphoneCaseNumber");
+         
+         iphoneCasePriceNegative("iphoneCasePrice");
+      });
+
       
 
 
@@ -133,12 +142,24 @@
          var floatIphoneNumber = parseFloat(iphoneNumber);
          document.getElementById(id).value = floatIphoneNumber -1;
       }
+      //iphone case number negative count function
+      function iphoneCaseNumberNegative (id){
+         var iphoneNumber = document.getElementById(id).value;
+         var floatIphoneNumber = parseFloat(iphoneNumber);
+         document.getElementById(id).value = floatIphoneNumber -1;
+      }
 
       //iphone negative price count function
       function iphonePriceNegative (id){
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice);
          document.getElementById(id).innerText = floatIphonePrice - 1219 ;
+      }
+      //iphone negative price count function
+      function iphoneCasePriceNegative (id){
+         var iphonePrice = document.getElementById(id).innerText;
+         var floatIphonePrice = parseFloat(iphonePrice);
+         document.getElementById(id).innerText = floatIphonePrice - 59 ;
       }
 
       //iphone number positive count function
