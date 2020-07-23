@@ -208,6 +208,8 @@
          var iphoneNumber = document.getElementById(id).value;
          var floatIphoneNumber = parseFloat(iphoneNumber.replace(/,/g, ''));
          
+            document.getElementById(id).value = floatIphoneNumber -1;
+         
          
          
       }
@@ -216,12 +218,16 @@
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice.replace(/,/g, ''));
          
+            document.getElementById(id).innerText = floatIphonePrice - 1219 ;
+         
          
       }
       //subtotal iphone negative price count function
       function iphoneSubTotalNegative (id){
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice.replace(/,/g, ''));
+         
+            document.getElementById(id).innerText = floatIphonePrice - 1219 ;
          
          
       }
@@ -237,12 +243,16 @@
          var iphoneNumber = document.getElementById(id).value;
          var floatIphoneNumber = parseFloat(iphoneNumber.replace(/,/g, ''));
          
+            document.getElementById(id).value = floatIphoneNumber -1;
+         
          
       }
       //iphone case negative price count function
       function iphoneCasePriceNegative (id){
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice.replace(/,/g, ''));
+         
+            document.getElementById(id).innerText = floatIphonePrice - 59 ;
          
          
       }
