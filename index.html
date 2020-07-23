@@ -88,33 +88,49 @@
       //iphone + button work
       var iphonePlusButton=document.getElementById('iphonePlusButton');
       iphonePlusButton.addEventListener('click',function(){
-         iphoneNumber ("iphoneNumber");
+         iphoneNumberPositive ("iphoneNumber");
          // var iphoneNumber = document.getElementById("iphoneNumber").value;
          // var floatIphoneNumber = parseFloat(iphoneNumber);
          // document.getElementById("iphoneNumber").value = floatIphoneNumber +1;
-         iphonePrice("iphonePrice");
+         iphonePricePositive("iphonePrice");
          // var iphonePrice = document.getElementById("iphonePrice").innerText;
          // var floatIphonePrice = parseFloat(iphonePrice);
          // document.getElementById("iphonePrice").innerText = floatIphonePrice + 1219 ;
       });
       var iphoneMinusButton = document.getElementById('iphoneMinusButton');
       iphoneMinusButton.addEventListener('click',function(){
-         var number = document.getElementById("iphoneNumber").value;
-         var floatNumber = parseFloat(number);
-         document.getElementById("iphoneNumber").value = floatNumber -1;
-         var Price = document.getElementById("iphonePrice").innerText;
-         var floatPrice = parseFloat(Price);
-         document.getElementById("iphonePrice").innerText = floatPrice - 1219 ;
+         // var number = document.getElementById("iphoneNumber").value;
+         // var floatNumber = parseFloat(number);
+         // document.getElementById("iphoneNumber").value = floatNumber -1;
+         iphoneNumberNegative("iphoneNumber");
+         // var Price = document.getElementById("iphonePrice").innerText;
+         // var floatPrice = parseFloat(Price);
+         // document.getElementById("iphonePrice").innerText = floatPrice - 1219 ;
+         iphonePriceNegative("iphonePrice");
       });
 
+      //iphone number negative count function
+      function iphoneNumberNegative (id){
+         var iphoneNumber = document.getElementById(id).value;
+         var floatIphoneNumber = parseFloat(iphoneNumber);
+         document.getElementById(id).value = floatIphoneNumber -1;
+      }
+
+      //iphone negative price count function
+      function iphonePriceNegative (id){
+         var iphonePrice = document.getElementById(id).innerText;
+         var floatIphonePrice = parseFloat(iphonePrice);
+         document.getElementById(id).innerText = floatIphonePrice - 1219 ;
+      }
+
       //iphone number positive count function
-      function iphoneNumber (id){
+      function iphoneNumberPositive (id){
          var iphoneNumber = document.getElementById(id).value;
          var floatIphoneNumber = parseFloat(iphoneNumber);
          document.getElementById(id).value = floatIphoneNumber +1;
       }
       //iphone positive price count function
-      function iphonePrice (id){
+      function iphonePricePositive (id){
          var iphonePrice = document.getElementById(id).innerText;
          var floatIphonePrice = parseFloat(iphonePrice);
          document.getElementById(id).innerText = floatIphonePrice + 1219 ;
