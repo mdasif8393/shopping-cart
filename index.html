@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="iphoneMinusButton" class="btn btn-default"><i class="fas fa-minus"></i></button>
 
                            <input type="text" id="iphoneNumber" class="form-control text-center" value="1"> 
 
-                           <button id="iphonePlus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="iphonePlusButton" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
 
@@ -86,18 +86,35 @@
    <script>
 
       //iphone + button work
-
-      var iphonePlusButton=document.getElementById('iphonePlus');
+      var iphonePlusButton=document.getElementById('iphonePlusButton');
       iphonePlusButton.addEventListener('click',function(){
-         var iphoneNumber = document.getElementById("iphoneNumber").value;
-         var floatIphoneNumber = parseFloat(iphoneNumber);
-         document.getElementById("iphoneNumber").value = floatIphoneNumber +1;
-         var iphonePrice = document.getElementById("iphonePrice").innerText;
-         const floatIphonePrice = parseFloat(iphonePrice);
-         document.getElementById("iphonePrice").innerText = floatIphonePrice + 1219 ;
+         iphoneNumber ("iphoneNumber");
+         // var iphoneNumber = document.getElementById("iphoneNumber").value;
+         // var floatIphoneNumber = parseFloat(iphoneNumber);
+         // document.getElementById("iphoneNumber").value = floatIphoneNumber +1;
+         iphonePrice("iphonePrice");
+         // var iphonePrice = document.getElementById("iphonePrice").innerText;
+         // var floatIphonePrice = parseFloat(iphonePrice);
+         // document.getElementById("iphonePrice").innerText = floatIphonePrice + 1219 ;
       });
 
+      //iphone number positive count function
+      function iphoneNumber (id){
+         var iphoneNumber = document.getElementById(id).value;
+         var floatIphoneNumber = parseFloat(iphoneNumber);
+         document.getElementById(id).value = floatIphoneNumber +1;
+      }
+      //iphone positive price count function
+      function iphonePrice (id){
+         var iphonePrice = document.getElementById(id).innerText;
+         var floatIphonePrice = parseFloat(iphonePrice);
+         document.getElementById(id).innerText = floatIphonePrice + 1219 ;
+      }
       //iphone - button work
+      // var iphoneMinusButton = document.getElementById("iphoneMinusButton");
+      // iphoneMinusButton = addEventListener('click',function(){
+         
+      // })
    </script>
 </body>
 
